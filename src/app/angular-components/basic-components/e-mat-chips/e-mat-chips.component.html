@@ -1,0 +1,40 @@
+<!-- component  -->
+
+<mat-chip-list aria-label="Chip selection" *ngIf="!eShareDataService.bootstrapCode">
+    <mat-chip>One chip</mat-chip>
+    <mat-chip>Two chips</mat-chip>
+    <mat-chip color="primary" selected>Primary chip</mat-chip>
+    <mat-chip color="accent" selected>Accent chip</mat-chip>
+</mat-chip-list>`
+
+<mat-card  *ngIf="eShareDataService.bootstrapCode">
+  <div class="chip">
+    John Doe
+    <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+  </div>
+</mat-card>
+
+<!-- /component  -->
+
+<!-- Description -->
+<h4 class="m-t-15">Description</h4>
+<mat-card class="m-t-15" style="width:100%;">
+  <p>
+    Chips are compact elements that represent an input, attribute, or action.
+  </p>
+
+</mat-card>
+<!-- /Description -->
+
+<!-- code Walk Through -->
+
+<h4 class="m-t-15" *ngIf="!eShareDataService.bootstrapCode">Setup</h4>
+<mat-card class="m-t-15" *ngIf="!eShareDataService.bootstrapCode">
+  <p>Step 1</p>
+  <p class="docs-api-module-import">
+    <code>
+          import &#123; MatChipsModule &#125; from '@angular/material/chips';
+    </code>
+  </p>
+</mat-card>
+<!-- / code Walk Through -->

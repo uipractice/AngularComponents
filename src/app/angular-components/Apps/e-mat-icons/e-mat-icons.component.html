@@ -1,0 +1,54 @@
+<mat-card class="m-t-15" *ngIf="!eShareDataService.bootstrapCode">
+
+  <section>
+    <mat-icon svgIcon="accessibility"></mat-icon>
+    <mat-icon svgIcon="accessible_forward"></mat-icon>
+    <mat-icon svgIcon="accessible"></mat-icon>
+    <mat-icon svgIcon="account_balance_wallet"></mat-icon>
+    <mat-icon svgIcon="account_balance"></mat-icon>
+  </section>
+  <!-- Description -->
+  <h4 class="m-t-15">Description</h4>
+  <mat-card class="m-t-15">
+    <p> Angular supports Material icons. If you want to use material icons in your project then you need to download svg
+      icons first then you need to import 'MatIconRegistry' from '@angular/material' and it's builtin service so need to
+      inject within constructor with serviceName after that need to write like this in constructor body <br />
+      <code>serviceName.addSvgIcon('name of the Icon','Icon path need to register Here').</code></p>
+  </mat-card>
+  <!-- /Description -->
+</mat-card>
+
+
+<mat-card class="m-t-15" *ngIf="eShareDataService.bootstrapCode">
+  <section class="fontawesomeContainer">
+    <i class="fa fa-user"></i>
+    <i class="fab fa-stack-overflow"></i>
+    <i class="far fa-thumbs-up"></i>
+    <i class="fas fa-bell"></i>
+    <i class="fas fa-blind"></i>
+    <i class="fas fa-calendar-alt"></i>
+  </section>
+  <!-- Description -->
+  <h4 class="m-t-15">Description</h4>
+  <mat-card class="m-t-15">
+    <p> Get vector icons and social logos on your website with Font Awesome, the web's most popular icon set and
+      toolkit.</p>
+  </mat-card>
+  <!-- /Description -->
+  <h4 class="m-t-15">Setup</h4>
+  <mat-card>
+    <div class="m-t-15">
+      <p>Bootstrap 4 dropped Glyphicons support, So we have to use some other icon font, like Font Awesome.</p>
+      <p>Step 1: Run below command in your project terminal.</p>
+      <p class="docs-api-module-import">
+        <code>
+            npm i bootstrap
+        </code>
+      </p>
+      <p>Step 2: Place respective <code>bootsrap.min.css, bootstrap.min.js and jQuery</code> files path in angular.json
+        file.</p>
+      <p> Step 3: Add <code>"https://use.fontawesome.com/releases/v5.0.8/js/all.js"</code> in index.html</p>
+    </div>
+  </mat-card>
+
+</mat-card>

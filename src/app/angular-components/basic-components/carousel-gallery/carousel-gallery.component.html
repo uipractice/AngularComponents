@@ -1,0 +1,41 @@
+<mat-card class="m-t-15" >
+    <section>
+<ngx-carousel  
+      [inputs]="carouselBanner" 
+      (carouselLoad)="carouselBannerLoad($event)">
+ 
+          <ngx-item NgxCarouselItem class="bannerStyle" *ngFor="let Banner of carouselBannerItems">
+            
+              <img width="100%" height="500px" alt="thumbnail" [src]="Banner.image" >
+              
+          </ngx-item>
+ 
+          <button NgxCarouselPrev class='leftRs'>&lt;</button>
+          <button NgxCarouselNext class='rightRs'>&gt;</button>
+    </ngx-carousel>
+</section>
+</mat-card>
+
+<!-- Description -->
+<h4 class="m-t-15">Description</h4>
+<mat-card class="m-t-15">
+<p>A slideshow component for cycling through elements—images or slides of textCarousel to easily create and control slideshows.</p>
+</mat-card>
+<!-- code Walk Through -->
+
+<h4 class="m-t-15">Setup</h4>
+<mat-card class="m-t-15">
+<p>Step 1</p>
+<p class="docs-api-module-import">
+<code>
+npm i ngx-carousel
+</code>
+</p>
+
+<p>Step 2</p>
+<p class="docs-api-module-import">
+<code>
+import &#123; NgxCarouselModule   &#125; from 'ngx-carousel';
+</code>
+</p>
+</mat-card>

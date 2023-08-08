@@ -1,0 +1,61 @@
+<!--Component-->
+<mat-tab-group *ngIf="!eShareDataService.bootstrapCode">
+  <mat-tab label="First"> Content 1 </mat-tab>
+  <mat-tab label="Second"> Content 2 </mat-tab>
+  <mat-tab label="Third"> Content 3 </mat-tab>
+</mat-tab-group>
+<section *ngIf="eShareDataService.bootstrapCode" style="border:1px double #ddd; padding:10px;">
+
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+        <li><a data-toggle="tab" href="#menu1">Tab 1</a></li>
+        <li><a data-toggle="tab" href="#menu2">Tab 2</a></li>
+        <li><a data-toggle="tab" href="#menu3">Tab 3</a></li>
+      </ul>
+      <div class="tab-content">
+          <div id="home" class="tab-pane fade in active">
+            <h3>HOME</h3>
+            <p>Home Content Here</p>
+          </div>
+          <div id="menu1" class="tab-pane fade">
+            <h3>Tab 1</h3>
+            <p>Tab 1 Contenet Here</p>
+
+          </div>
+          <div id="menu2" class="tab-pane fade">
+            <h3>Tab 2</h3>
+            <p>Tab 2 Contenet Here</p>
+
+          </div>
+          <div id="menu3" class="tab-pane fade">
+            <h3>Tab 3</h3>
+            <p>Tab 3 Contenet Here</p>
+          </div>
+        </div>
+</section>
+<!--<Component>-->
+
+<!-- Description -->
+<h4 class="m-t-15">Description</h4>
+<mat-card class="m-t-15">
+  <p>
+      Tab is a graphical control element that allows multiple documents or panels to be contained within a single window. You can use tabs as a navigational widget for switching between sets of documents. 
+  </p>
+
+</mat-card>
+<!-- /Description -->
+
+<!-- code Walk Through -->
+<section  *ngIf="!eShareDataService.bootstrapCode">
+    <h4 class="m-t-15">Setup</h4>
+    <mat-card class="m-t-15">
+      <p>Step 1</p>
+      <p class="docs-api-module-import">
+        <code>    
+              import &#123; MatTabsModule &#125; from '@angular/material/tabs';
+        </code>
+      </p>
+    </mat-card>
+</section>
+
+<!-- / code Walk Through -->

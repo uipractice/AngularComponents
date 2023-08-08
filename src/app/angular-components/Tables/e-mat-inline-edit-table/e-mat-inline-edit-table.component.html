@@ -1,0 +1,79 @@
+<div class="example-container mat-elevation-z8">
+	<div class="example-header">
+		<mat-form-field>
+			<input matInput #filter (keyup)="getValueOnKeyup($event)" placeholder="Filter">
+			<button mat-icon-button matSuffix aria-label="clear" *ngIf="filter.value" (click)="filter.value=''; applyFilter('');">
+        <mat-icon>close</mat-icon>
+      </button>
+		</mat-form-field>
+	</div>
+
+	<mat-table #table [dataSource]="dataSource">
+
+		<!-- Position Column -->
+		<ng-container matColumnDef="position">
+			<mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+			<mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+		</ng-container>
+
+		<!-- Name Column -->
+		<ng-container matColumnDef="name">
+			<mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+			<mat-cell *matCellDef="let element">
+				<mat-form-field floatLabel="never" style="width:80%">
+					<input matInput placeholder="Name" [value]="element.name" [(ngModel)]="element.name">
+				</mat-form-field>
+			</mat-cell>
+		</ng-container>
+
+		<!-- Weight Column -->
+		<ng-container matColumnDef="weight">
+			<mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>
+			<mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
+		</ng-container>
+
+		<!-- Symbol Column -->
+		<ng-container matColumnDef="symbol">
+			<mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
+			<mat-cell *matCellDef="let element">
+				<mat-form-field floatLabel="never" style="width:80%">
+					<input matInput placeholder="Symbol" [value]="element.symbol" [(ngModel)]="element.symbol">
+				</mat-form-field>
+			</mat-cell>
+		</ng-container>
+
+		<!-- Fav Column -->
+		<ng-container matColumnDef="fav">
+			<mat-header-cell *matHeaderCellDef> Favorite </mat-header-cell>
+			<mat-cell *matCellDef="let element">
+				<mat-form-field floatLabel="never">
+					<mat-select [(value)]="element.fav" placeholder="Favorite">
+						<mat-option>None</mat-option>
+						<mat-option value="Yes">Yes</mat-option>
+					</mat-select>
+				</mat-form-field>
+			</mat-cell>
+		</ng-container>
+
+		<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+		<mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+	</mat-table>
+
+</div>
+<!-- Description -->
+<h4 class="m-t-15">Description</h4>
+<mat-card class="m-t-15">
+	<p>Inline Editing is a new technology introduced in CKEditor 4 that allows a user to select any editable element on the page and edit it in-place. As a result, the editor can be used to edit content that looks just like the final page.
+	</p>
+
+</mat-card>
+<!-- /Description -->
+<h4 class="m-t-15">Setup</h4>
+<mat-card class="m-t-15">
+  <p>Step 1</p>
+  <p class="docs-api-module-import">
+    <code>
+          import &#123; MatTableDataSource   &#125; from '@angular/material';
+    </code>
+  </p>
+</mat-card>

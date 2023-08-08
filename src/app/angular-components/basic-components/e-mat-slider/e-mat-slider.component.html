@@ -1,0 +1,39 @@
+<!--Component-->
+<!-- <mat-slider></mat-slider> -->
+<mat-slider [(ngModel)]="value" [min]="min" [max]="max" [step]="step"></mat-slider>
+
+<mat-card class="result">
+  <mat-card-content>
+    <h4 class="example-h2">Result {{value}}</h4>
+  </mat-card-content>
+</mat-card>
+
+
+<!--<Component>-->
+
+<!-- Description -->
+
+<h4 class="m-t-15">Description</h4>
+<mat-card class="m-t-15">
+    <p>
+        Sliders allow users to select from a range of values by moving the slider thumb.
+        It is similar in behavior to the native
+        <code> &lt; input type="range" &gt; </code>  element.
+    </p>
+
+</mat-card>
+
+<!-- /Description -->
+
+<!-- code Walk Through -->
+
+<h4 class="m-t-15">Setup</h4>
+<mat-card class="m-t-15">
+    <p>Step 1</p>
+    <p class="docs-api-module-import">
+        <code>
+          import &#123; MatSliderModule &#125; from '@angular/material/slider';
+    </code>
+    </p>
+</mat-card>
+<!-- / code Walk Through -->

@@ -1,0 +1,35 @@
+.example-container {
+  width: 600px;
+  height: 300px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.example-sidenav {
+  padding: 20px;
+}
+.btn-primary .badge{
+  color: #fff;
+  background-color: #337ab7;
+}
+.btn-success .badge{
+  background: #449d44;
+  color:#fff;
+}
+.btn-danger .badge{
+  background: #d43f3a;
+  color:#fff;
+}
+.btn-primary .badge, .btn-success .badge, .btn-danger .badge {
+  top: -17px;
+  right: -25px;
+}
+.container{
+  width:100% !important;
+}

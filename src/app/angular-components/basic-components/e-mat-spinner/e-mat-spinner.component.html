@@ -1,0 +1,77 @@
+<!--Component-->
+<div class="spinner-container" *ngIf="!eShareDataService.bootstrapCode">
+        <mat-spinner></mat-spinner>
+</div>
+<section *ngIf="eShareDataService.bootstrapCode">
+        <div class="row">
+            <div class="col-md-3 bg">
+            <div class="loader" id="loader-2">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="col-md-3 bg">
+            <div class="loader" id="loader-4">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="col-md-3 bg">
+            <div class="loader" id="loader-1"></div>
+          </div>
+          <div class="col-md-3 bg">
+            <div class="loader" id="loader-6">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="col-md-3 bg">
+            <div class="loader" id="loader-3"></div>
+          </div>
+          
+          <div class="col-md-3 bg">
+            <div class="loader" id="loader-5">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          
+          
+          <div class="col-md-3 bg">
+            <div class="loader" id="loader-8"></div>
+          </div>
+          <div class="col-md-3 bg">
+            <div class="loader" id="loader-7"></div>
+          </div>
+        </div>
+    
+    </section>
+<!--<COmponent>-->
+
+<!-- Description -->
+<h4 class="m-t-15">Description</h4>
+<mat-card class="m-t-15">
+        <p>
+                Spinner is used to display progress of those tasks whose total time of completion is unknown.
+        </p>
+
+</mat-card>
+<!-- /Description -->
+<!-- code Walk Through -->
+
+<h4 class="m-t-15" *ngIf="!eShareDataService.bootstrapCode" >Setup</h4>
+<mat-card class="m-t-15" *ngIf="!eShareDataService.bootstrapCode">
+        <p>Step 1</p>
+        <p class="docs-api-module-import">
+                <code>    
+           import &#123; MatProgressSpinnerModule &#125; from '@angular/material/progress-spinner';
+     </code>
+        </p>
+</mat-card>
+<!-- / code Walk Through -->

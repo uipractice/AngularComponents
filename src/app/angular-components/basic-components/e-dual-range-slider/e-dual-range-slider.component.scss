@@ -1,0 +1,61 @@
+.profile_data .form-group.range_slider {
+    padding-bottom: 30px;
+}
+.profile_data .form-group.range_slider small{
+	margin-bottom:15px;
+	    display: inline-block;
+}
+.profile_data .form-group.range_slider .noUi-target{
+	background: #d8d8d8;
+    border-radius: 10px;
+    height: 10px;
+    border: 0;
+    box-shadow: none;
+	    margin: 25px 25px 0 25px;
+}
+.profile_data .form-group.range_slider .noUi-handle{
+	top: -7px;
+    background: #70be44;
+    border: 0;
+    box-shadow: none;
+    border-radius: 18px;
+    width: 20px;
+    height: 20px;
+    outline: none;
+}
+.profile_data .form-group.range_slider .noUi-connect {
+    background: #70be44;
+}
+.profile_data .form-group.range_slider .noUi-handle:before{
+	    content: "";
+    border: 1px solid #70be44;
+    left: -3px;
+    height: auto;
+    width: 26px;
+    height: 26px;
+    top: -3px;
+    background: none;
+    border-radius: 18px;
+
+}
+.profile_data .form-group.range_slider .noUi-handle:after{
+	content: "";
+	background: none;
+}
+.profile_data .form-group.range_slider .range-from span{
+	    position: absolute;
+    color: #ff9709;
+    font-size: 12px;
+    top: -23px;
+	font-weight:600;
+}
+.profile_data .form-group.range_slider .range-from span:first-child{
+	left:0;
+}
+.profile_data .form-group.range_slider .range-from span:last-child{
+	right:0;
+}
+.profile_data .form-group.form_range_slider{
+    overflow:visible;
+    margin-bottom:20px;
+}

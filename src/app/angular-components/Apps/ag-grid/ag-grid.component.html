@@ -1,0 +1,43 @@
+
+ <div #aggriTable>
+  <mat-card class="m-t-15"  *ngIf="!eShareDataService.bootstrapCode">
+
+    <ag-grid-angular
+       style="width: 100%; height: 350px;"
+       class="ag-theme-alpine"
+       [rowData]="rowData"
+       [columnDefs]="columnDefs"
+      >
+   </ag-grid-angular>
+   </mat-card>
+ </div>
+
+<!-- Description -->
+<h4 class="m-t-15">Description</h4>
+<mat-card class="m-t-15">
+	<p>An Angular data grid is a component used to display tabular data in a series of rows and columns.</p>
+
+</mat-card>
+<!-- /Description -->
+<h4 class="m-t-15">Setup</h4>
+<mat-card class="m-t-15">
+  <p>Step 1</p>
+  <p class="docs-api-module-import">
+    <code>
+      npm install --save ag-grid-community;
+        </code>
+     
+  </p>
+  <p>Step 2</p>
+  <p class="docs-api-module-import">
+   <code>
+      npm install --save ag-grid-angular;  
+   </code>
+  </p>
+  <p>Step 3</p>
+  <p class="docs-api-module-import">
+   <code>
+           import &#123; AgGridModule&#125; from 'ag-grid-angular';
+   </code>
+ </p>
+</mat-card>

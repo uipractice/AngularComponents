@@ -1,0 +1,63 @@
+<!--Component-->
+<section *ngIf="!eShareDataService.bootstrapCode">
+<button mat-raised-button
+        matTooltip="ToolTip on Top"
+        matTooltipPosition="above"
+        aria-label="Button that displays a tooltip when focused or hovered over">
+        ToolTip on Top
+</button> &nbsp;
+<button mat-raised-button
+        matTooltip="ToolTip on Right"
+        matTooltipPosition="after"
+        aria-label="Button that displays a tooltip when focused or hovered over">
+        ToolTip on Right
+</button> &nbsp;
+<button mat-raised-button
+        matTooltip="ToolTip on below"
+        matTooltipPosition="below"
+        aria-label="Button that displays a tooltip when focused or hovered over">
+        ToolTip on below
+</button> &nbsp;
+<button mat-raised-button
+        matTooltip="ToolTip on Left"
+        matTooltipPosition="left"
+        aria-label="Button that displays a tooltip when focused or hovered over">
+  ToolTip on Left
+</button>
+</section>
+<!-- <section *ngIf="eShareDataService.bootstrapCode">
+
+<ul class="list-inline">
+    <li><a href="#" data-toggle="tooltip" data-placement="top" title="Hooray!">Top</a></li>
+    <li><a href="#" data-toggle="tooltip" data-placement="bottom" title="Hooray!">Bottom</a></li>
+    <li><a href="#" data-toggle="tooltip" data-placement="left" title="Hooray!">Left</a></li>
+    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Hooray!">Right</a></li>
+  </ul>
+</section> -->
+<!--<Component>-->
+
+<!-- Description -->
+
+<h4 class="m-t-15">Description</h4>
+<mat-card class="m-t-15">
+      <p>
+            A message which appears when a cursor is positioned over an icon, image, hyperlink, or any other element in a graphical user interface.
+      </p>
+
+</mat-card>
+
+<!-- /Description -->
+
+<!-- code Walk Through -->
+<section *ngIf="!eShareDataService.bootstrapCode">
+<h4 class="m-t-15">Setup</h4>
+<mat-card class="m-t-15">
+      <p>Step 1</p>
+      <p class="docs-api-module-import">
+            <code>    
+          import &#123; MatTooltipModule  &#125; from '@angular/material/tooltip';
+            </code>
+      </p>
+</mat-card>
+</section>
+<!-- / code Walk Through -->

@@ -1,0 +1,92 @@
+<h5>Virtual Scroll using with cdk</h5>
+
+
+
+<!-- <div *cdkVirtualFor="let n of displayRecords" style="height:200px;">{{n.username}}</div> -->
+
+<cdk-virtual-scroll-viewport itemSize="50" style="height:175px; display: block; overflow: auto;">
+
+    <table style="width:100%;">
+        <tr>
+            <th width="10%">S. No.</th>
+            <th width="30%">User Name</th>
+            <th width="30%">Emp ID</th>
+            <th width="30%">User Email ID</th>
+        </tr>
+    </table>
+    <div style="width:100%; height:auto; padding-bottom:5px;">
+        <table style="width:100%;">
+            <tbody style="height:200px;">
+                <tr *cdkVirtualFor="let n of displayRecords; let i=index">
+                    <th width="10%">{{i+1}}</th>
+                    <td width="30%">{{n.username}}</td>
+                    <td width="30%">{{n.empId}}</td>
+                    <td width="30%">{{n.emailId}}</td>
+                <tr>
+            </tbody>
+        </table>
+    </div>
+</cdk-virtual-scroll-viewport>
+
+<h4 class="m-t-15">Description</h4>
+<mat-card class="m-t-15">
+    <p>
+        The <code>cdk-virtual-scroll-viewport</code> displays large lists of elements performantly by only rendering the
+        items that fit on-screen. Loading hundreds of elements can be slow in any browser; virtual scrolling enables a
+        performant way to simulate all items being rendered by making the height of the container element the same as
+        the height of total number of elements to be rendered, and then only rendering the items in view. Virtual
+        scrolling is different from strategies like infinite scroll where it renders a set amount of elements and then
+        when you hit the end renders the rest.
+    </p>
+
+</mat-card>
+<!-- /Description -->
+
+<!-- code Walk Through -->
+
+<h4 class="m-t-15">Setup</h4>
+<mat-card class="m-t-15" *ngIf="!eShareDataService.bootstrapCode">
+    <p>Step 1: Import ScrollingModule in app.module.ts</p>
+    <p class="docs-api-module-import">
+        <code>
+            import &#123; ScrollingModule &#125; from '@angular/cdk/scrolling';
+        </code>
+
+    </p>
+</mat-card>
+
+<section *ngIf="eShareDataService.bootstrapCode">
+    <mat-card>
+    <div class="m-t-15">
+            <p>Step 1: Import ScrollingModule in app.module.ts</p>
+            <p class="docs-api-module-import">
+                <code>
+                    import &#123; ScrollingModule &#125; from '@angular/cdk/scrolling';
+                </code>
+        
+            </p>
+      <p>Step 2:  Run below commands in your project terminal.</p>
+      <p>For Bootstrap 3</p>
+      <p class="docs-api-module-import">
+        <code>
+            npm install bootstrap@3.3.7
+              <!-- import &#123; MatGridListModule &#125; from '@angular/material/grid-list'; -->
+        </code>
+        <p>For Bootstrap 4</p>
+        <p class="docs-api-module-import">
+          <code>
+              npm install bootstrap
+          </code>
+        </p><br/>
+        <p class="docs-api-module-import">
+            <code>
+              npm i bootstrap@latest
+                  <!-- import &#123; MatGridListModule &#125; from '@angular/material/grid-list'; -->
+            </code>
+          </p>
+      <p>Step 3:  Place respective <code>bootsrap.min.css, bootstrap.min.js and jQuery</code> files path in angular.json file.</p>
+     
+    </div>
+    </mat-card>
+</section>
+<!-- / code Walk Through -->

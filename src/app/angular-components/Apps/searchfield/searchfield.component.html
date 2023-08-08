@@ -1,0 +1,66 @@
+<mat-card class="m-t-15"  *ngIf="!eShareDataService.bootstrapCode">
+
+<section>
+<mat-form-field>
+<!-- <i class="fa fa-search materialicons"></i> -->
+<input type="text" aria-label="Assignee" matInput [formControl]="myControl" [matAutocomplete]="auto"
+id="mySearchField1" style="text-transform: capitalize" placeholder="&nbsp;Search">
+<mat-icon matSuffix>search</mat-icon>
+<mat-autocomplete #auto="matAutocomplete">
+<mat-option *ngFor="let option of listItems.cards | async" [value]="option | specialPipe">
+{{option | specialPipe}}
+</mat-option>
+</mat-autocomplete>
+</mat-form-field>
+
+</section>
+<!-- Description -->
+
+<!-- /Description -->
+
+
+<h4 class="m-t-15">Description</h4>
+<mat-card class="m-t-15">
+<p> Angular supports Material Autocomplete. If you want to use material Search in your project then you
+need to use Material Autocomplete and customize the <code>searchfield.component.ts </code>file for search
+functionality.It can be implemented with buttons or icons and placed as an input or in the navbar for an even better user experience.</p>
+</mat-card>
+<!-- code Walk Through -->
+
+<h4 class="m-t-15">Setup</h4>
+<mat-card class="m-t-15">
+<p>Step 1</p>
+<p class="docs-api-module-import">
+<code>
+import &#123; MatAutocompleteModule  &#125; from '@angular/material/autocomplete';
+</code>
+
+</p>
+</mat-card>
+
+</mat-card>
+<mat-card class="m-t-15" *ngIf="eShareDataService.bootstrapCode">
+<section >
+<div class="form-group has-search bts">
+<span class="fa fa-search form-control-feedback"></span>
+<input type="text" class="form-control " placeholder="Search"  [formControl]="myControl" [matAutocomplete]="auto" id="mySearchField"
+placeholder="Search">
+<mat-autocomplete #auto="matAutocomplete">
+<mat-option *ngFor="let option of listItems.cards | async" [value]="option">
+{{option}}
+</mat-option>
+</mat-autocomplete>
+</div>
+</section>
+<h4 class="m-t-15">Description</h4>
+<mat-card class="m-t-15">
+This is a bootstrap search field with an icon of a small magnifying glass that indicates a search function.This icon makes it easy for users to recognize the search form. By seeing it, the users can quickly understand that they have to type in this box to search for something.
+</mat-card>
+<!-- <h4 class="m-t-15">Setup</h4>
+<mat-card>
+<div class="m-t-15">
+empty
+</div>
+</mat-card> -->
+
+</mat-card>

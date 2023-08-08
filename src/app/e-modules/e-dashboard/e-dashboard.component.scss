@@ -1,0 +1,63 @@
+.divcontent{
+	display: flex;
+	justify-content: center;
+}
+
+.cardcontent{
+	width: 25%;
+    height: 100px;
+    background-color: grey;
+    margin: 3px;
+    color: #fff;
+
+}
+
+.cardlayout{
+	  display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+}
+.main-content-das {
+    margin: 0px 55px;
+    padding-top: 35px;
+}
+.ag-description h1 {
+color:#023047;
+font-size:28px;
+line-height: 25px;
+margin-bottom: 18px;
+}
+
+.ag-description P {
+    color:#87878D;
+}
+
+.ag-description.main-content-das {
+    padding-left: 13px;
+}
+.ag-description.main-content-das img {
+    padding-right: 18px;
+    margin-top: -8px;
+}
+
+.mat-form-field-underline.ng-tns-c4-0.ng-star-inserted {
+    display: none;
+}
+
+.ng-tns-c14-27.ng-trigger.ng-trigger-routeAnimation.ng-star-inserted {
+    padding-bottom: 60px;
+}
+
+
+
+@media (max-width:768px) {
+ 
+  .ag-description.main-content-das img {
+    padding-right:8px;
+  }
+  
+  .main-content-das {
+    margin: 0px 15px;
+    padding-top: 25px;
+  }
+  }

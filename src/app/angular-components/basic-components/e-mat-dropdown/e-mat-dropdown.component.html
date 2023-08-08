@@ -1,0 +1,50 @@
+<!--Component-->
+
+  <mat-form-field style="width:300px" *ngIf="!eShareDataService.bootstrapCode">
+    <mat-select placeholder="Favorite Food" >
+      <mat-option *ngFor="let food of foods" [value]="food.value">
+        {{food.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+   
+    <div class="container" *ngIf="eShareDataService.bootstrapCode">
+      <h2>Favorite Food</h2>
+      <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li *ngFor="let food of foods"><a routerLink="/dropdown">{{food.viewValue}}</a></li>
+        </ul>
+      </div>
+    </div>
+ 
+
+
+<!--<Component>-->
+
+
+<!-- Description -->
+<h4 class="m-t-15">Description</h4>
+<mat-card class="m-t-15">
+  <p>
+      Dropdown is simply a drop-down menu embedding additional links or content. It allows you to construct much more advanced navigation and link categorization.
+  </p>
+
+</mat-card>
+<!-- /Description -->
+
+<!-- code Walk Through -->
+
+<h4 class="m-t-15" *ngIf="!eShareDataService.bootstrapCode">Setup</h4>
+<mat-card class="m-t-15" *ngIf="!eShareDataService.bootstrapCode">
+  <p>Step 1</p>
+  <p class="docs-api-module-import">
+    <code>    
+          import &#123; MatSelectModule &#125; from '@angular/material/select';
+    </code>
+  </p>
+</mat-card>
+<!-- / code Walk Through -->

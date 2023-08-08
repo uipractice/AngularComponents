@@ -1,0 +1,23 @@
+
+<mat-card class="example-card">
+  <form name="survay-form">
+  <div *ngFor="let x of questions">
+    {{questions.indexOf(x) + 1 + " . "}}{{x.question}}<br/>
+     <div *ngFor = "let y of x.options">
+       <input type = "radio" [name] = 'x.name'/> {{y}}
+     </div><br/>
+     <button type="button" name="button" class="mat-raised-button" *ngIf="questions.indexOf(x) == questions.length-1">Submit</button>
+
+   </div>
+   </form>
+
+
+
+</mat-card>
+<!-- Description-->
+<h4 class="m-t-15">Description</h4>
+<mat-card class="m-t-15">
+  <p>Surveys are conducted to gather information from individuals through a printed questionnaire, over the telephone, by e-mail, in person, by diskette, or on the web.</p>
+
+</mat-card>
+<!-- /Description -->

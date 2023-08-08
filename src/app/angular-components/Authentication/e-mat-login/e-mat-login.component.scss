@@ -1,0 +1,36 @@
+.example-full-width{
+    width:30%;
+}
+.login-container{
+    margin: 0px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+
+    max-width: 30% !important;
+}
+.login-form-1 h3{
+    text-align: center;
+    color: #333;
+}
+.login-container form{
+    padding: 0px;
+    padding-top:15px;
+}
+.btnSubmit{
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+}
+.login-form-1 .ForgetPwd{
+    color: #0062cc;
+    font-weight: 600;
+    text-decoration: none;
+}
+.txt-grey{
+    color:grey;
+}
+.login-form-1{
+    padding-left:0px;
+}

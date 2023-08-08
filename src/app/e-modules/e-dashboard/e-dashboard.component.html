@@ -1,0 +1,22 @@
+<div class="ag-description main-content-das applicationHeader">
+  <h1> <img src="assets/img/angular-logo.jpg"   alt="">Angular Components <span class="codeDumpName">{{'('+sharedService.codeDumpname+')'}}</span></h1>
+  <p>On this page you’ll find a collection of components of angular used in our projects, which we thought might be helpful and ease your work. To use this components you just need to copy the code provided along with the component and paste it in your project. If you are facing any issues or want to provide feedback please contact our team.</p>
+</div>
+<div class="main-content-das" fxLayout="row wrap" fxLayoutAlign="start start"  *ngFor="let item of list">
+  <!-- <h1 style="display:block;">{{item.name}}</h1> -->
+ <mat-card-title>{{item.name}}</mat-card-title>
+ <mat-card style="margin:12px" class="pointer dashboard_card mat-card-dashboard datagridCustom" *ngFor="let x of item.cards" (click)="openComponent(x)">
+      <a class="card-ds"><div class="dashoard_list">
+            <div class="box_img_sec"style="padding-bottom:15px;">
+            <mat-icon class="md-18 dashboard_icon_fet"  md-list-icon svgIcon="core:{{x.icon}}" style="color:#0088d1 !important"></mat-icon>
+            </div>
+            <div class="box_title">
+            <h6 style="text-transform: capitalize">{{x.name | specialPipe}}</h6>
+            </div>
+            <p>{{x.desc}}</p>
+        </div>
+      </a>
+    </mat-card> 
+  </div>
+  <div style="width: 100px; height:100px; background:#fff;"></div>
+

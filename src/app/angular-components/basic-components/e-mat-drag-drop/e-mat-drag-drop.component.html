@@ -1,0 +1,78 @@
+<div cdkDropListGroup>
+  <div class="example-container">
+    <h2>Drag from 1</h2>
+
+    <div
+      cdkDropList
+      [cdkDropListData]="container1"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)" style="padding:10px;">
+      <!-- <div class="example-box" cdkDrag><select></select></div> -->
+      <div class="example-box" *ngFor="let item of container1" cdkDrag>
+
+        <input type="{{item.type}}" value="{{item.name}}" class="{{item.class}}"/>
+
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="example-container">
+    <h2 [hidden]="container2.length!=0">Drop in 2</h2>
+    <h2 [hidden]="container2.length==0">To Remove Drop in 1</h2>
+
+    <div
+      cdkDropList
+      [cdkDropListData]="container2"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of container2" cdkDrag>
+          <input type="{{item.type}}" value="{{item.name}}" class="{{item.class}}"/>
+            <span style="color:#ff0000; font-weight:bold; font-size:20px; cursor:pointer!important; padding:5px;">&times;</span>
+      </div>
+    </div>
+
+  </div>
+  <div class="example-container">
+    <h2 [hidden]="container3.length!=0">Drop in 3</h2>
+    <h2 [hidden]="container3.length==0">To Remove Drop in 1</h2>
+
+    <div
+      cdkDropList
+      [cdkDropListData]="container3"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of container3" cdkDrag>
+          <input type="{{item.type}}" value="{{item.name}}" class="{{item.class}}"/>
+        <span style="color:#ff0000; font-weight:bold; font-size:20px; cursor:pointer!important; padding:5px;">&times;</span>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Description -->
+<h4 class="m-t-15">Description</h4>
+<mat-card class="m-t-15">
+    <p>Drag and drop is a pointing device gesture in which the user selects a virtual object by "grabbing" it and dragging it to a different location or onto another virtual object. In general, it can be used to invoke many kinds of actions, or create various types of associations between two abstract objects.</p>
+
+</mat-card>
+<!-- /Description -->
+
+<!-- code Walk Through -->
+
+<h4 class="m-t-15">Setup</h4>
+<mat-card class="m-t-15">
+    <p>Step 1</p>
+    <p class="docs-api-module-import">
+        <code>
+          npm install @angular/cdk@7.0.0
+        </code>
+    </p>
+    <p>Step 2</p>
+    <p class="docs-api-module-import">
+        <code>
+            import &#123; DragDropModule &#125; from '@angular/cdk/drag-drop';
+        </code>
+    </p>
+</mat-card>
+    <!-- / code Walk Through -->

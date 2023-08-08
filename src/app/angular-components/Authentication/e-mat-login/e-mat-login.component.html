@@ -1,0 +1,121 @@
+<mat-card class="example-card" *ngIf="!eShareDataService.bootstrapCode">
+  <mat-card-header>
+    <mat-card-title>Login</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+      <form class="example-form" [formGroup]="loginFormMat">
+          <table class="example-full-width" cellspacing="0" style="width:30%;">
+            <tr>
+              <td>
+                <mat-form-field class="example-full-width" style="width:100%;">
+                <input matInput placeholder="User Name" formControlName="username" name="username" >
+                <mat-error>
+                    <span *ngIf="!loginFormMat.get('username')?.valid && loginFormMat.get('username')?.touched"> User Name Required</span>
+                </mat-error>
+                </mat-form-field>
+                
+              </td>
+            </tr>
+            <tr>
+            <td>
+              <mat-form-field class="example-full-width" style="width:100%;">
+              <input matInput placeholder="Password" formControlName="password" type="password" name="password">
+              <mat-error>
+                  <span *ngIf="!loginFormMat.get('password')?.valid && loginFormMat.get('password')?.touched">Password Required</span>
+              </mat-error>
+            </mat-form-field>
+            <label class="txt-grey">Password sample format : John@143</label>            
+          </td>
+          </tr>
+          <tr><td></td></tr>
+          <tr>
+       
+          <td colspan="2" class="content-center">
+              <button  mat-raised-button color="primary" [disabled]="!loginFormMat.valid" type="submit">Login</button>
+          </td>
+      </tr>
+      <tr>
+        <td>
+            <a routerLink="/dashboard" class="ForgetPwd">Forget Password?</a>
+        </td>
+      </tr>
+        </table>
+        </form>
+         
+         
+       
+
+  </mat-card-content>
+   <!-- Description -->
+<h4 class="m-t-15">Description</h4>
+<mat-card class="m-t-15">
+  <p>Set of credentials used to gain access to an area that requires proper authorization is called login. Logins are used to gain access and control of computers, networks, and bulletin boards, as well as other services and devices.</p>
+
+</mat-card>
+<!-- /Description -->
+<!-- code Walk Through -->
+
+<h4 class="m-t-15">Setup</h4>
+<mat-card class="m-t-15">
+  <p>Step 1</p>
+  <p class="docs-api-module-import">
+    <code>
+          import &#123; ReactiveFormsModule  &#125; from '@angular/forms';
+    </code>
+  </p>
+</mat-card>
+</mat-card>
+
+
+<mat-card class="example-card" *ngIf="eShareDataService.bootstrapCode">
+    <mat-card-header>
+      <mat-card-title class="text-center">Login</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="container login-container">
+            <div class="row">
+                <div class="col-md-12 login-form-1">
+                    <form  [formGroup]="loginFormBoots">
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">User Name</label>
+                          <input type="text" class="form-control" formControlName="username" aria-describedby="emailHelp" placeholder="Enter User Name" required>
+                          
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Password</label>
+                          <input type="password" class="form-control" formControlName="password" placeholder="Password" required><br/>
+                        <label class="txt-grey">Password sample format : John@143</label>
+                        </div>
+                        
+                        <button type="submit" [disabled]="!loginFormBoots.valid " [ngClass]="!loginFormBoots.valid ? 'btn btn-disabled' : 'btn btn-primary'"type="submit">Login</button><br/>
+                        <a class="ForgetPwd" routerLink="/dashboard">Forgot Password ?</a>
+                      </form>
+                     
+                      
+                </div>
+              
+            </div>
+        </div>
+       
+  
+    </mat-card-content>
+     <!-- Description -->
+  <h4 class="m-t-15">Description</h4>
+  <mat-card class="m-t-15">
+    <p>Set of credentials used to gain access to an area that requires proper authorization is called login. Logins are used to gain access and control of computers, networks, and bulletin boards, as well as other services and devices.</p>
+  
+  </mat-card>
+  <!-- /Description -->
+  <!-- code Walk Through -->
+  
+  <h4 class="m-t-15">Setup</h4>
+  <mat-card class="m-t-15">
+    <p>Step 1</p>
+    <p class="docs-api-module-import">
+      <code>
+            import &#123; ReactiveFormsModule  &#125; from '@angular/forms';
+      </code>
+    </p>
+  </mat-card>
+  </mat-card>
+  

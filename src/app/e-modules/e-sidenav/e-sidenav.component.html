@@ -1,0 +1,146 @@
+<mat-toolbar class="example-container " color="primary" class="header top_header">
+  <button class="btn-right-res" mat-icon-button aria-label="Example icon-button with a menu right-menu-rw" *ngIf="sharedService.smallscaleDevice" (click)="openMenuFunction()">
+  <mat-icon>{{hambergerClick==true?'menu':'close'}}</mat-icon>
+  </button>
+  
+  <span>
+  <a class="logo-evoke" href="http://components.evokeapps.com/">
+  <img src="assets/img/Evoke_logo.png" height="35" alt="">
+  </a>
+  </span>
+  <!-- <mat-icon *ngIf="sharedService.smallscaleDevice">keyboard_arrow_down</mat-icon> -->
+  
+  <button class="arrow-down-menu" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" *ngIf="sharedService.smallscaleDevice">
+  <mat-icon>keyboard_arrow_down</mat-icon>
+  </button>
+  <mat-menu class="mr-menu" #menu="matMenu">
+  <a mat-menu-item class="navBtnActive" routerLink="/dashboard" (click)="clearVal()"><span><img width="18" src="assets/img/icons-03.svg" alt="Angular Components" title="Angular Components"> Angular Components </span></a>
+  <a mat-menu-item href="http://react-components.evokeapps.com"><span><img width="18" src="assets/img/icons-02.svg" alt="React Components" title="React Components"> React Components</span> </a>
+  <a mat-menu-item href="http://ui-components.evokeapps.com"><span><img width="18" src="assets/img/icons-01.svg" alt="UI Components" title="UI Components"> UI Components</span></a>
+  <a mat-menu-item href="http://components.evokeapps.com/styleguide/EvokeStyleGudie.pdf"><span><img width="18" src="assets/img/icons-04.svg" alt="Style guides" title="Style guides"> Style guides</span></a>
+  <a mat-menu-item href="http://components.evokeapps.com/design_system/EvokeDesignSystem.pdf"><span><img width="18" src="assets/img/icons-05.svg" alt="Design System" title="Design System"> Design System</span></a>
+  </mat-menu>
+  
+  
+  <div class="nav-main" *ngIf="!sharedService.smallscaleDevice">
+  <a target="_blank" href="http://components.evokeapps.com/design_system/EvokeDesignSystem.pdf"> Design System</a>
+  <a target="_blank" href="http://components.evokeapps.com/styleguide/EvokeStyleGudie.pdf">Style guides</a>
+  <a href="http://ui-components.evokeapps.com">UI Components</a>
+  <a href="http://react-components.evokeapps.com">React Components </a>
+  <a class="navBtnActive" routerLink="/dashboard" (click)="clearVal()">Angular Components </a>
+  </div>
+  
+  </mat-toolbar>
+  <nav class="bread-bg-cl" aria-label="breadcrumb" *ngIf="!sharedService.smallscaleDevice">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+  <a href="http://components.evokeapps.com">Home</a>
+  <span class="arrow-left"></span>
+  </li>
+  <li class="breadcrumb-item">
+  <a routerLink="/" (click)="setdefaultComponent()">Angular Components</a>
+  <!-- <a routerLink="/" (click)="setdefaultComponent()">Angular Components <span class="codeDumpName_breadcrumb">{{'('+sharedService.codeDumpname+')'}}</span></a> -->
+  <span class="arrow-left"></span>
+  </li>
+  <li class="breadcrumb-item active" aria-current="page" style="text-transform: capitalize;">{{sharedService.activeComponent | specialPipe}}&nbsp;</li>
+  <li class="search-right-main">
+  <a class="search-head" style="cursor: pointer;" *ngIf="seachiconDisplay" (click)="searchFunction()">
+  <i class="met-search material-icons">search</i>
+  </a>
+  <mat-form-field [ngClass]="searchIconClick == false ? 'disabledField' : 'example-full-width enabledField'">
+  <input type="text" aria-label="Assignee"  matInput [formControl]="myControl" [matAutocomplete]="auto" id="mySearchField" style="text-transform: capitalize">
+  <mat-autocomplete #auto="matAutocomplete">
+  <mat-option *ngFor="let option of listItems.cards | async" [value]="option | specialPipe">
+  <a routerLink="{{'/'+option}}" style="display:block; width:100%; text-transform: capitalize" (click)="setActiveComponent(option)">{{option | specialPipe}}</a>
+  </mat-option>
+  </mat-autocomplete>
+  </mat-form-field> 
+  <a class="closeIconClass" *ngIf="searchIconClick" (click)="searchIconClick=false; clearVal();">
+  <span style="position: relative;  cursor: pointer;">&times;</span>
+  </a>
+  </li>
+  </ol>
+  </nav>
+  
+  
+  
+  <mat-sidenav-container class="example-sidenav-container">
+  
+  
+  
+  <mat-sidenav #sidenav [mode]="navMode" class="side_nav">
+  <mat-nav-list>
+  
+  <mat-tree #tree [dataSource]="dataSource" [treeControl]="treeControl">
+  
+  <mat-tree-node class="childNode side_nav_list" *matTreeNodeDef="let node" matTreeNodeToggle matTreeNodePadding  (click)="onMenuClick(node)">
+  
+  <a style="cursor: pointer;" (click)="setActiveComponent(node.filename)" class="text-captilize" id="{{node.filename}}" style="padding-left:20px;" [ngClass]="{'active' : activeUrl == node.filename}" autofocus>
+  <span>{{node.filename | specialPipe}}</span>
+  
+  </a>
+  </mat-tree-node>
+  
+  
+  
+  <mat-tree-node class="parentNode " *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding style="padding-left:30px;"
+  matTreeNodeToggle (click)="clearVal()">
+  
+  <img width="18" class="navigation-left-icon" src="assets/img/leftnav_3.svg" alt="" title="">
+  <!-- <i class="material-icons icon-code">code</i> -->
+  
+  
+  <!-- <i [class]="sideNavIcons.minusSquare"></i>&nbsp; -->
+  <a [attr.aria-label]="'toggle ' + node.filename" class="text-captilize">
+  {{node.filename | specialPipe}}
+  </a>
+  <mat-icon class="mat-icon-rtl-mirror" style="right:8px;position: absolute;">
+  {{treeControl.isExpanded(node) ? 'keyboard_arrow_up ' : 'keyboard_arrow_down'}}
+  </mat-icon>
+  
+  </mat-tree-node>
+  </mat-tree>
+  </mat-nav-list>
+  <div class="menu-left" *ngIf="!sharedService.smallscaleDevice">
+  <button mat-icon-button (click)="toggleImg()" style="width:36px;height:64px;margin-left:-16px;border-radius:0%">
+  <mat-icon class="md-24 new-menu-icon open-left-icon" style="color:#0088D1 !important" *ngIf="!menuToggleAct"></mat-icon>
+  <mat-icon class="md-24 new-menu-icon close-right-icon" style="color:#0088D1 !important" *ngIf="menuToggleAct"></mat-icon>
+  
+  </button>
+  </div>
+  </mat-sidenav>
+  
+  <mat-sidenav-content>
+  <div style="width:100%; height:auto;" *ngIf="sharedService.smallscaleDevice">
+  <mat-form-field class="example-full-width enabledField">
+  <input type="text" aria-label="Assignee"  matInput [formControl]="myControl" [matAutocomplete]="auto" placeholder="Search Components" id="mySearchField" style="text-transform: capitalize">
+  <mat-autocomplete #auto="matAutocomplete">
+  <mat-option *ngFor="let option of listItems.cards | async" [value]="option">
+  <a routerLink="{{'/'+option}}" style="display:block; width:100%; text-transform: capitalize" (click)="setActiveComponent(option)">{{option}}</a>
+  </mat-option>
+  </mat-autocomplete>
+  </mat-form-field>
+  </div>
+  <nav class="bread-bg-cl" aria-label="breadcrumb" *ngIf="sharedService.smallscaleDevice">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+  <a href="http://components.evokeapps.com/">Home</a>
+  <span class="arrow-left"></span>
+  </li>
+  <li class="breadcrumb-item">
+  <a routerLink="/" (click)="setdefaultComponent()">Angular Components</a>
+  <!-- <a routerLink="/" (click)="setdefaultComponent()">Angular Components <span class="codeDumpName_breadcrumb">{{'('+sharedService.codeDumpname+')'}}</span></a> -->
+  <span class="arrow-left"></span>
+  </li>
+  <li class="breadcrumb-item active" aria-current="page" style="text-transform: capitalize;">{{sharedService.activeComponent}}&nbsp;</li>
+  </ol>
+  </nav>
+  
+  <div class="myCustomeClass-main"> 
+  <router-outlet></router-outlet>    
+  </div>
+  </mat-sidenav-content>
+  
+  </mat-sidenav-container>
+  <app-footer></app-footer>
+  

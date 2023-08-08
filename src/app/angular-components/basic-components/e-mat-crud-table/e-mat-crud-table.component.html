@@ -1,0 +1,32 @@
+
+<mat-card class="example-card">
+  <h5 class="m-t-15">CRUD in Table (Create, Read, Update, Delete)</h5>
+   <table class="table table-bordered">
+     <tr>
+<th>Item Name</th>
+<th>Cost</th>
+<th colspan="2">Operation</th>
+     </tr>
+     <tr *ngFor="let x of dataSource">
+       <td>{{x.name}}</td>
+       <td>{{x.cost}}</td>
+       <td width="100"><button class="btn btn-primary btn-block" (click)="editRecord(x)">Edit</button></td>
+       <td width="100"><button class="btn btn-danger btn-block" (click)="deleteRecord(x)">Delete</button></td>
+     </tr>
+     <tr>
+       <td><input type="text" class="form-control" [(ngModel)]="nameVal" placeholder="Item Name"/></td>
+       <td><input type="text" class="form-control" [(ngModel)]="costVal" (keypress)="numberOnly($event)" placeholder="Item Cost"/></td>
+       <td colspan="2">
+         <button class="btn btn-block" (click)="addRecord();" *ngIf="!update">Add</button>
+         <button class="btn btn-block" (click)="updateRecord();" *ngIf="update">Update</button>
+       </td>
+     </tr>
+   </table>
+</mat-card>
+<!-- Description -->
+<h4 class="m-t-15">Description</h4>
+<mat-card class="m-t-15">
+  <p> Above Table have CRUD Operations, you can create your own record, and update already existing and newly created records, and also delete a perticular record from userside with in the table. CRUD means Create, Read,Update And Delete</p>
+
+</mat-card>
+<!-- /Description -->

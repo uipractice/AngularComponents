@@ -1,0 +1,17 @@
+<table class="tableClass"> 
+    <tr mat-dialog-title><mat-icon > info </mat-icon> 
+      <label class="titleClass">{{title}}</label>
+    </tr>
+    <tr> 
+      <td [ngStyle]="{'text-align': alignLeft == true ? 'left' : 'center','padding-left':alignLeft == true ?'10px':'0px' }" >
+        <mat-dialog-content>
+            {{description}}
+          </mat-dialog-content>
+        </td>
+      </tr>
+      <tr fxLayoutAlign="center">
+          <mat-dialog-actions >
+              <button mat-button mat-primary  (click)="close()">Close</button>
+          </mat-dialog-actions>
+    </tr>
+  </table>

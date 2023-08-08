@@ -1,0 +1,132 @@
+//@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$ngMat-primary: mat-palette($mat-indigo);
+$ngMat-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$ngMat-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$ngMat-theme: mat-light-theme($ngMat-primary, $ngMat-accent, $ngMat-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($ngMat-theme);
+
+@import './scss/css/custom.scss';
+@import './scss/css/reuse.scss';
+@import 'prismjs/themes/prism.css';
+
+
+
+// @import '~prismjs/themes/prism-coy.css';
+// @import '~prismjs/themes/prism-dark.css';
+// @import '~prismjs/themes/prism-funky.css';
+// @import '~prismjs/themes/prism-okaidia.css';
+// @import '~prismjs/themes/prism-solarizedlight.css';
+// @import '~prismjs/themes/prism-tomorrow.css';
+// @import '~prismjs/themes/prism-twilight.css';
+// @import '~prismjs/themes/prism.css';
+@import "~@ngx-docs/example/dist/docs-example.scss"; // added
+
+
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+@import '~@covalent/core/theming/all-theme';
+
+// (optional) Additional themes
+@import '~@covalent/markdown/markdown-theme';
+@import '~@covalent/highlight/highlight-theme';
+//@import "~fullcalendar/dist/fullcalendar.css";
+
+
+// Define a custom typography config that overrides the font-family
+// or any typography level.
+$typography: mat-typography-config(
+  /*$font-family: 'Roboto, monospace',*/
+  $headline: mat-typography-level(32px, 48px, 700)
+);
+
+@include mat-core($typography); // $typography is an **optional** argument for the mat-core
+
+// $primary: mat-palette($mat-orange, 800, 100, 900);
+$light-blue:  mat-palette($mat-light-blue, 600, 100, 900);
+
+$warn:    mat-palette($mat-red, 600, 100, 900);
+
+$theme: mat-light-theme($light-blue, $warn);
+
+@include angular-material-theme($theme);
+@include covalent-theme($theme, $typography); // $typography is an **optional** argument for the covalent-theme
+
+// (optional) Additional themes
+@include covalent-markdown-theme($theme);
+@include covalent-highlight-theme();
+body { $margin: 0; font-family: 'Lato', sans-serif; }
+
+.mat-tab-body-content {
+    overflow: scroll;
+}
+
+.spinner-container {
+    padding: 20px;
+}
+
+.bd-clipboard {
+    position: relative;
+    float: right;
+}
+
+.btn-clipboard:hover {
+    color: black;
+   // background-color: #027de7;
+}
+
+.btn-clipboard {
+    position: absolute !important;
+    top: 0.5rem;
+    right: 1rem;
+    z-index: 10;
+    display: block;
+    padding: .25rem .5rem;
+    font-size: 75%;
+    color: #818a91;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    border-radius: .25rem;
+}
+.mat-card-dashboard{
+  max-width: 15% !important;
+}
+@media (max-width: 599px){
+  .mat-card-dashboard{
+    max-width: 100% !important;
+  }
+}
+
+html, body { height: 100%; font-family: 'Lato', sans-serif; }
+body { margin: 0;  font-family: 'Lato', sans-serif; }
+@import 'ag-grid-community/styles/ag-grid.css';
+@import 'ag-grid-community/styles/ag-theme-alpine.css';
+
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+}

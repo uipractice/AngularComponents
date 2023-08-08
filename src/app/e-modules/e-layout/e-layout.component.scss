@@ -1,0 +1,152 @@
+.divcontent{
+	display: flex;
+	justify-content: center;
+}
+
+.cardcontent{
+	width: 100%;
+    height: 100px;
+    margin: 5px;
+}
+
+.cardlayout{
+	  display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+}
+
+.mat-card, .mat-card-content, .mat-action-row, .mat-expansion-panel{
+  // background-color: lightblue !important;
+  background-color: #dcdde1;
+}
+
+.mat-expansion-panel-header {
+  // background-color: blue !important;
+  background: #f5f6fa;
+}
+/*
+.mar-left {
+  margin-left: 2rem;
+}*/
+
+.mar-top {
+  margin-top: 0rem;
+}
+// ngx-prism  pre{
+//   height: 300px !important;
+// }
+// mat-tab-group ::ng-deep   mat-tab-header  .mat-tab-label-container  .mat-tab-list  .mat-tab-labels{
+//   color: rgba(0,0,0,.54) !important;
+//   background: rgba(0,0,0,.03) !important;
+// }
+.mat-ink-bar{
+  left:0px;
+}
+
+.row.mar-top.main-content-das {
+  margin: 0px 50px;
+}
+.mat-form-field-underline.ng-tns-c5-0.ng-star-inserted {
+  display: none;
+}
+
+.mat-button-ripple.mat-ripple.mat-button-ripple-round {
+  display: none;
+}
+
+/*
+.footer {
+  padding: 18px 30px 15px 0px;
+  background: #F4F4F4;
+  height: 62px;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  z-index: 1000000!important;
+  margin-top: 20px;
+ 
+}
+
+.footer ul li {
+float: left;
+font-size: 12px;
+color:#373741;
+padding-right:10px;
+}
+
+.footer ul li a{
+float: left;
+font-size: 12px;
+color:#1473E6;
+float: right;
+  }
+.footer ul {
+float: right;
+  }
+.footer ul li:first-child{
+  float: left;
+  position: absolute;
+  left: 70px
+  }
+  */
+
+  pre {
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+    word-wrap: break-word;
+    background-color: transparent !important;
+    border: none !important;
+    height: unset !important;
+  
+    code {
+      flex: 1;
+      line-height: 1.5em;
+      font-size: 14px;
+      min-height: 100%;
+      padding: 1em 1.2em;
+      overflow-x: hidden;
+  
+      &.hljs-line-numbers {
+        padding: 0 !important;
+      }
+    }
+  }
+  
+  /** Line numbers styles */
+  .hljs {
+    margin: 0 1em;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    transition: border ease 1s;
+  }
+  
+  .hljs-ln {
+    padding: 8px 0;
+  
+    tr {
+      &:first-child td {
+        padding-top: 8px !important;
+      }
+  
+      &:last-child td {
+        padding-bottom: 8px !important;
+      }
+    }
+  }
+  
+  /* for block of numbers */
+  td.hljs-ln-numbers {
+    user-select: none;
+    text-align: center;
+    border-right: 1px solid gray;
+    vertical-align: top;
+    padding-right: 8px !important;
+    padding-left: 8px !important;
+  }
+  
+  /* for block of code */
+  td.hljs-ln-code {
+    padding-left: 8px !important;
+  }

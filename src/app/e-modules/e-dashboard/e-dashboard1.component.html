@@ -1,0 +1,37 @@
+
+<div fxLayout="row wrap" fxLayoutAlign="start start" style="margin:8px;" *ngFor="let item of list">
+
+  <!-- <h1 style="display:block;">{{item.name}}</h1> -->
+  
+ <mat-card-title>{{item.name}}</mat-card-title>
+
+    <mat-card style="margin:8px" class="pointer dashboard_card mat-card-dashboard" *ngFor="let card of item.cards" (click)="openComponent(x)">
+        <div class="dashoard_list">
+            <div class="box_img_sec"style="padding-bottom:15px;">
+            <mat-icon class="md-18 dashboard_icon_fet"  md-list-icon svgIcon="core:{{card.icon}}"></mat-icon>
+
+            </div>
+            <div class="box_title">
+            <h6>{{card.name}}</h6>
+            </div>
+        </div>
+    </mat-card>
+
+  </div>
+
+
+
+
+<!-- <div fxLayout="row wrap" fxLayoutAlign="start start" style="margin:8px">
+    <mat-card style="margin:8px" class="pointer dashboard_card mat-card-dashboard"  fxFlex="100" fxFlex.xs="100" fxFlex.sm="20" fxFlex.md="20"  fxFlex.lg="23" fxFlex.xl="25"  fxLayoutAlign="center center" *ngFor="let item of list" (click)="openComponent(item)">
+        <div class="dashoard_list">
+            <div class="box_img_sec" [style.background]="item.background" style="padding-bottom:15px;">
+            <mat-icon class="md-18 dashboard_icon_fet"  md-list-icon svgIcon="core:{{item.icon}}"></mat-icon>
+
+            </div>
+            <div class="box_title" [style.background]="item.background">
+            <h6>{{item.name}}</h6>
+            </div>
+        </div>
+    </mat-card>
+</div> -->

@@ -1,0 +1,39 @@
+<!-- component -->
+<mat-form-field *ngIf="!eShareDataService.bootstrapCode">
+  <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
+</mat-form-field>
+
+<div *ngIf="eShareDataService.bootstrapCode">
+
+ <input type="date" class="form-control" style="width:300px; padding:5px;line-height: 1.42857143;" [(ngModel)]="model"/>
+   <br/>
+  <pre style="height:50px; padding:10px !important;width:300px;">Model: {{ model | json }}</pre>
+
+</div>
+<!-- /component -->
+
+<!-- Description -->
+<h4 class="m-t-15">Description</h4>
+ 
+    <mat-card class="m-t-15">
+      <p>
+          This widget lets the user pick both the date and time within a single interface. A common use case is to select a date and time of travel.
+      </p>
+  </mat-card>
+
+<!-- code Walk Through -->
+
+<h4 class="m-t-15">Setup</h4>
+<div class="m-t-15">
+  <mat-card class="m-t-15">
+  <p>Step 1</p>
+  <p class="docs-api-module-import">
+    <code>    
+           import &#123; MatDatepickerModule &#125; from '@angular/material/datepicker';
+     </code>
+  </p>
+</mat-card>
+</div>
+<!-- / code Walk Through -->

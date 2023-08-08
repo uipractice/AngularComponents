@@ -1,0 +1,113 @@
+<mat-grid-list cols="2" rowHeight="2:1" *ngIf="!eShareDataService.bootstrapCode">
+  <mat-grid-tile>1</mat-grid-tile>
+  <mat-grid-tile>2</mat-grid-tile>
+  <mat-grid-tile>3</mat-grid-tile>
+  <mat-grid-tile>4</mat-grid-tile>
+</mat-grid-list>
+
+
+
+
+<div class="container-fluid" *ngIf="eShareDataService.bootstrapCode">
+   
+ 
+  
+  <div class="row">
+     
+          <div class="col-sm-1">.col-sm-1</div>
+          <div class="col-sm-1">.col-sm-1</div>
+          <div class="col-sm-1">.col-sm-1</div>
+          <div class="col-sm-1">.col-sm-1</div>
+          <div class="col-sm-1">.col-sm-1</div>
+          <div class="col-sm-1">.col-sm-1</div>
+          <div class="col-sm-1">.col-sm-1</div>
+          <div class="col-sm-1">.col-sm-1</div>
+          <div class="col-sm-1">.col-sm-1</div>
+          <div class="col-sm-1">.col-sm-1</div>
+          <div class="col-sm-1">.col-sm-1</div>
+          <div class="col-sm-1">.col-sm-1</div>
+  </div>
+          <div class="row">   
+    <div class="col-sm-2">.col-sm-2</div>
+    <div class="col-sm-2">.col-sm-2</div>
+    <div class="col-sm-2">.col-sm-2</div>
+    <div class="col-sm-2">.col-sm-2</div>
+    <div class="col-sm-2">.col-sm-2</div>
+    <div class="col-sm-2">.col-sm-2</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-3">.col-sm-3</div>
+    <div class="col-sm-3">.col-sm-3</div>
+    <div class="col-sm-3">.col-sm-3</div>
+    <div class="col-sm-3">.col-sm-3</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">.col-sm-4</div>
+    <div class="col-sm-4">.col-sm-4</div>
+    <div class="col-sm-4">.col-sm-4</div>  
+  </div>
+  
+  <div class="row">
+    <div class="col-sm-5">.col-sm-5</div>
+    <div class="col-sm-7">.col-sm-7</div> 
+  </div>
+  
+  <div class="row">
+    <div class="col-sm-6">.col-sm-6</div>
+    <div class="col-sm-6">.col-sm-6</div> 
+  </div>
+  
+  <div class="row">
+    <div class="col-sm-7">.col-sm-7</div>
+    <div class="col-sm-5">.col-sm-5</div> 
+  </div>
+  <div class="row">
+    <div class="col-sm-8">.col-sm-8</div>
+    <div class="col-sm-4">.col-sm-4</div> 
+  </div>
+  <div class="row">
+    <div class="col-sm-9">.col-sm-9</div>
+    <div class="col-sm-3">.col-sm-3</div> 
+  </div>
+  <div class="row">
+    <div class="col-sm-10">.col-sm-10</div>
+    <div class="col-sm-2">.col-sm-2</div> 
+  </div>
+  <div class="row">
+    <div class="col-sm-11">.col-sm-11</div>
+    <div class="col-sm-1">.col-sm-1</div> 
+  </div>
+  <div class="row">
+    <div class="col-sm-12">.col-sm-12</div>
+  </div>
+ 
+  </div>
+  
+
+  <!-- Description -->
+  <h4 class="m-t-15">Description</h4>
+  <mat-card>
+      <div class="m-t-15">
+          <p>A grid table contains a set of data that is structured in rows and columns, allowing a user to scroll in both directions and handle large numbers of items and columns. 
+          </p>
+      
+        </div>
+
+  </mat-card>
+ 
+  <!-- /Description -->
+
+  <!-- code Walk Through -->
+
+  <h4 class="m-t-15" *ngIf="!eShareDataService.bootstrapCode">Setup</h4>
+  <mat-card>
+  <div class="m-t-15" *ngIf="!eShareDataService.bootstrapCode">
+    <p>Step 1</p>
+    <p class="docs-api-module-import">
+      <code>
+            import &#123; MatGridListModule &#125; from '@angular/material/grid-list';
+      </code>
+    </p>
+  </div>
+  </mat-card>
+  <!-- / code Walk Through -->

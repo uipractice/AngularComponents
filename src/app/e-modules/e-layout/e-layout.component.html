@@ -1,0 +1,122 @@
+<div class="row mar-top main-content-das">
+ 
+  <div class="col-md-12 padding0 mar-left">
+ <div fxLayout="row wrap" fxLayoutAlign="start start" style="margin:23px 0px 0px 26px;">
+<div class="row mar-top" style="width:100%">
+  <div class="col-md-12 padding0 mar-left"> 
+    <div fxLayout="row wrap" fxLayoutAlign="start start" style="margin:8px">
+      <h2>{{componentName}}</h2>
+      <div class="buttons-block-internal applicationHeader">
+        <a mat-raised-button *ngIf="bootstrapOnly || noBootstraopnMaterial" style="color:#b6b6c3 !important" class="mat-primary" disabled>Material</a>
+        <a mat-raised-button *ngIf="!bootstrapOnly && !noBootstraopnMaterial"(click)="eShareDataService.materialDisplay()" [ngClass]="eShareDataService.materialpCode == true || eShareDataService.nobootstrapnmaterialCode == true ? 'mat-accent':'mat-primary bg-white'">Material</a>
+        <a mat-raised-button *ngIf="!notApplicable && !noBootstraopnMaterial" (click)="eShareDataService.bootstrapDisplay()" [ngClass]="eShareDataService.bootstrapCode == true  ? 'mat-accent':'mat-primary bg-white'">Bootstrap</a>
+        <a mat-raised-button *ngIf="notApplicable || noBootstraopnMaterial" style="color:#b6b6c3 !important" class="mat-primary" disabled>Bootstrap</a>
+    </div>
+    </div>
+  </div>
+  <div class="card col-md-12 padding0 mar-left main_box">
+    <mat-tab-group class="top_header_tab">
+      <mat-tab label="Demo">
+        <div class="padding30">
+          <router-outlet name="basic"></router-outlet>
+
+        </div>
+      </mat-tab>
+      <mat-tab label="Code" *ngIf="eShareDataService.materialpCode || eShareDataService.nobootstrapnmaterialCode">
+
+        <mat-tab-group>
+          <mat-tab label="HTML" *ngIf="code.html">
+            <div class="bd-clipboard">
+              <button mat-icon-button (click)="copyToClipboard(code.html.content)" class="btn-clipboard" title="" data-original-title="Copy to clipboard">
+                <mat-icon class="md-24 copy_code">file_copy</mat-icon>
+              </button>
+            </div>
+            <!-- <ngx-prism [language]="'html'" [code]="code.html.content"></ngx-prism> -->
+            <pre class = "preBlock"><code>{{code.html.content}}</code></pre>
+
+          </mat-tab>
+          <mat-tab label="TypeScript" *ngIf="code.ts">
+            <div>
+              <div class="bd-clipboard">
+                <button mat-icon-button (click)="copyToClipboard(code.ts.content)" class="btn-clipboard" title="" data-original-title="Copy to clipboard">
+                  <mat-icon class="md-24 copy_code">file_copy</mat-icon>
+                </button>
+              </div>
+            </div>
+            <pre><code>{{code.ts.content}}</code></pre>
+            <!-- <ngx-prism [language]="'javascript'" [code]="code.ts.content"></ngx-prism> -->
+          </mat-tab>
+          <mat-tab label="Service" *ngIf="code.service">
+            <div>
+              <div class="bd-clipboard">
+                <button mat-icon-button (click)="copyToClipboard(code.service.content)" class="btn-clipboard" title="" data-original-title="Copy to clipboard">
+                  <mat-icon class="md-24 copy_code">file_copy</mat-icon>
+                </button>
+              </div>
+            </div>
+            <pre><code>{{code.service.content}}</code></pre>
+            <!-- <ngx-prism [language]="'javascript'" [code]="code.service.content"></ngx-prism> -->
+          </mat-tab>
+          <mat-tab label="CSS" *ngIf="code.css">
+            <div class="bd-clipboard">
+              <button mat-icon-button (click)="copyToClipboard(code.css.content)" class="btn-clipboard" title="" data-original-title="Copy to clipboard">
+                <mat-icon class="md-24 copy_code">file_copy</mat-icon>
+              </button>
+            </div>
+            <pre><code>{{code.css.content}}</code></pre>
+            <!-- <ngx-prism [language]="'css'" [code]="code.css.content" class="code_view"></ngx-prism> -->
+          </mat-tab>
+        </mat-tab-group>
+      </mat-tab>
+
+      <mat-tab label="Code" *ngIf="eShareDataService.bootstrapCode">
+        <mat-tab-group>
+          <mat-tab label="HTML" *ngIf="code.bootstrapHtml">
+            <div class="bd-clipboard">
+              <button mat-icon-button (click)="copyToClipboard(code.bootstrapHtml.content)" class="btn-clipboard" title="" data-original-title="Copy to clipboard">
+                <mat-icon class="md-24 copy_code">file_copy</mat-icon>
+              </button>
+            </div>
+            <pre><code>{{code.bootstrapHtml.content}}</code></pre>
+            <!-- <ngx-prism [language]="'html'" [code]="code.bootstrapHtml.content"></ngx-prism> -->
+          </mat-tab>
+          <mat-tab label="TypeScript" *ngIf="code.bootstrapTS">
+            <div>
+              <div class="bd-clipboard">
+                <button mat-icon-button (click)="copyToClipboard(code.bootstrapTS.content)" class="btn-clipboard" title="" data-original-title="Copy to clipboard">
+                  <mat-icon class="md-24 copy_code">file_copy</mat-icon>
+                </button>
+              </div>
+            </div>
+            <pre><code>{{code.bootstrapTS.content}}</code></pre>
+            <!-- <ngx-prism [language]="'javascript'" [code]="code.bootstrapTS.content"></ngx-prism> -->
+          </mat-tab>
+           
+          <mat-tab label="CSS" *ngIf="code.bootstrapCSS">
+            <div class="bd-clipboard">
+              <button mat-icon-button (click)="copyToClipboard(code.bootstrapCSS.content)" class="btn-clipboard" title="" data-original-title="Copy to clipboard">
+                <mat-icon class="md-24 copy_code">file_copy</mat-icon>
+              </button>
+            </div>
+            <pre><code>{{code.bootstrapCSS.content}}</code></pre>
+            <!-- <ngx-prism [language]="'css'" [code]="code.bootstrapCSS.content" class="code_view"></ngx-prism> -->
+          </mat-tab>
+        </mat-tab-group>
+        
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+   
+</div>
+</div>
+</div> 
+</div>
+<!-- <div class="footer">
+  <ul>
+    <li>Designed & Developed by Evoke Technologies Pvt Ltd © 2019 All Rights Reserved | Beta v.1.0</li>
+    <li><a href="#">Provide feedback </a></li>
+    <li><span>/ </span></li>
+    <li><a href="#"> Request component </a></li>
+   
+  </ul>
+</div> -->

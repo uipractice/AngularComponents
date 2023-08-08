@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row pt-3">
+        <div class="col-sm-12">
+            <h2 class="text-center mb-4">Simple Translator</h2>
+            <mat-divider></mat-divider>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-sm-6">
+            <form #translator="ngForm" (ngSubmit)="send()">
+                <mat-form-field>
+                    <input type="text" name="enText" matInput placeholder="English Text" required minlength="5" [(ngModel)]="enText" (input)="onEnTextInput()">
+                </mat-form-field>
+                <mat-form-field>
+                    <textarea name="enDescription" placeholder="English Description" matInput minlength="5" rows="10" required [(ngModel)]="enDescription" (input)="onEnDescriptionInput()"></textarea>
+                </mat-form-field>
+                <div class="d-flex justify-content-between">
+                    <button type="button" mat-raised-button color="accent" (click)="enDescription = ''; enText = ''">Erase</button>
+                    <!-- <button type="submit" id="btnSubmit" mat-raised-button color="primary" 
+                    [disabled]="enDescription === '' || enText === ''">Translate</button> -->
+                </div>
+            </form>
+        </div>
+        <div class="col-sm-6">
+            <form #translator="ngForm">
+                <mat-form-field>
+                    <input type="text" name="arText" matInput placeholder="Arabic Text" [(ngModel)]="arText" readonly>
+                </mat-form-field>
+                <mat-form-field>
+                    <textarea name="arDescription" placeholder="Arabic Description" matInput rows="10" readonly [(ngModel)]="arDescription"></textarea>
+                </mat-form-field>
+            </form>
+        </div>
+    </div>
+</div>

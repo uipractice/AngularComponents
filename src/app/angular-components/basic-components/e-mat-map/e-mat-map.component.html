@@ -1,0 +1,37 @@
+<!--Component-->
+
+<h5>{{ title }}</h5>
+<!-- this creates a google map on the page with the given lat/lng from -->
+<!-- the component as the initial center of the map: -->
+<agm-map [latitude]="lat" [longitude]="lng">
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map>
+<!-- <Component> -->
+
+<!-- Description -->
+<h4 class="m-t-15">Description</h4>
+
+<mat-card class="m-t-15">
+  <p> Map is a diagrammatic representation of the geographical regions and sites around the world. Maps can also be implemented in Forms & Modals. </p>
+</mat-card>
+
+<!-- /Description -->
+
+<!-- code Walk Through -->
+
+<h4 class="m-t-15">Setup</h4>
+<mat-card class="m-t-15">
+  <p>Step 1</p>
+  <p class="docs-api-module-import">
+    <code>  
+        npm i @agm/core 
+    </code>
+  </p>
+  <p>Step 2</p>
+  <p class="docs-api-module-import">
+      <code>  
+          import &#123; AgmCoreModule &#125; from '@agm/core';
+      </code>
+  </p>
+</mat-card>
+<!-- / code Walk Through -->

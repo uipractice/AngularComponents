@@ -1,0 +1,25 @@
+
+ .mat-grid-tile {
+  display: block;
+  position: absolute;
+  border:1px solid #dfe0e8;
+  border-radius: 5px;
+
+ // margin-top: 0px !important;
+}
+.mat-grid-list {
+  display: block;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding-bottom: 350px !important;
+
+}
+.shop{
+  width:100%;
+  background-color:#ff9b21;
+  color:white;
+}
+// .mat-card{
+//   width:calc(100%-50px);
+// }

@@ -1,0 +1,35 @@
+<mat-card class="m-t-15">
+<section>
+<form  #myForm="ngForm" (ngSubmit)="onSubmitmyForm(myForm.value)" accept-charset="UTF-8" >
+  <ckeditor [(ngModel)]="mycontent" #myckeditor="ngModel" name="myckeditor" [config]="ckeConfig"
+  (paste)="onPaste($event)" required>
+  </ckeditor>
+  <div *ngIf="myckeditor.invalid && myckeditor.touched" id="warn">Required field.</div><br>
+  <button [disabled]="myForm.invalid" class="mat-raised-button mat-button-base mat-accent">Submit</button>
+</form>
+</section>
+<br><br>
+</mat-card>
+<!-- /Description -->
+<h4 class="m-t-15">Description</h4>
+<mat-card class="m-t-15">
+<p> Angular text editor is program that allows you to open, view, and edit plain text files and get it as xml or json format</p>
+</mat-card>
+<!-- code Walk Through -->
+
+<h4 class="m-t-15">Setup</h4>
+<mat-card class="m-t-15">
+<p>Step 1</p>
+<p class="docs-api-module-import">
+<code>
+npm i ckeditor4-angular
+</code>
+</p>
+<p>Step 2</p>
+<p class="docs-api-module-import">
+<code>
+import &#123; CKEditorModule   &#125; from 'ckeditor4-angular';
+</code>
+
+</p>
+</mat-card>

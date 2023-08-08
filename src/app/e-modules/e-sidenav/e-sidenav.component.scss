@@ -1,0 +1,305 @@
+.example-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+h1.example-app-name {
+  margin-left: 8px;
+}
+
+.example-is-mobile .example-sidenav-container {
+  /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+     `<body>` to be our scrolling element for mobile layouts. */
+  flex: 1 0 auto;
+}
+
+
+.expansionIcons {
+  background: #F26222;
+  border-radius: 50%;
+  content: "+";
+  color: #fff;
+  float: left;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 2px 10px 0 0;
+  text-align: center;
+  width: 18px;
+  height: 18px;
+  line-height: 19px !important;
+  transition: background-color 0.3s ease-in-out;
+}
+.sidenav-fab-container .mat-sidenav-content,
+.sidenav-fab-container mat-sidenav {
+    display: flex !important;
+    overflow: hidden;
+}
+mat-sidenav-content{
+  overflow-x: hidden !important;
+}
+.mat-drawer[style*="visibility: hidden"] {
+   display: block;
+}
+.active {
+  color : rgb(0, 136, 209) !important;
+}
+.mat-list, .mat-nav-list, .mat-selection-list{
+  padding: 0px;
+}
+/*.navBtnActive{
+  opacity: 1;
+  mix-blend-mode: normal;
+  padding: 0px;
+  border-width: 0px;
+  border-radius: 100px;
+  border-color: rgb(102, 102, 102);
+  border-style: solid;
+  background-color:#0088D1;
+  background-image: none;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center center;
+  width: 145px;
+  height: 39px;
+  font-size: 14px;
+  color:#fff !important;
+  text-align: center;
+  cursor: pointer;
+  padding: 3px;
+}*/
+.navBtn{
+  opacity: 1;
+  mix-blend-mode: normal;
+  padding: 0px;
+  border-width: 0px;
+  border-radius: 100px;
+  border-color: rgb(102, 102, 102);
+  border-style: solid;
+  // background-color: rgb(255, 255, 255);
+  background-image: none;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center center;
+  width: 145px;
+  height: 40px;
+  font-size: 14px;
+  color: #ffffff !important;
+  text-align: center;
+  cursor: not-allowed;
+  padding: 4px;
+}
+.parentNode {
+  opacity: 1;
+  mix-blend-mode: normal;
+  padding: 0px;
+  border-width: 0px 0px 1px;
+  border-radius: 0px;
+  border-color: rgb(223, 224, 232);
+  border-style: solid;
+  background-color: rgb(255, 255, 255);
+  background-image: none;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center center;
+  padding: 0px 10px 0px 16px !important;
+  cursor: pointer;
+}
+.childNode{
+  opacity: 1;
+    mix-blend-mode: normal;
+    padding: 0px;
+    border-width: 0px 0px 1px;
+    border-radius: 0px;
+    border-color: rgb(223, 224, 232);
+    border-style: solid;
+    /*background-color: rgb(245, 245, 245);*/
+    background-image: none;
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center center;
+    min-height:26px;
+
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+ 
+.bred-color-main {
+  background:#F5F5F5;
+}
+
+.nav-main {
+  float: right;
+  width: 89%;
+}
+.nav-main a { 
+color: #87878D;
+font-size: 13px;
+text-transform: uppercase;
+font-weight: 700;
+padding: 17px 22px;
+float: right;
+padding-top: 20px;
+letter-spacing: 1px;
+font-family: 'Lato', sans-serif !important;
+}
+.nav-main a:hover {  
+background: #0088D1;
+color:#fff;
+}
+a.navBtnActive {
+background: #0088D1;
+color:#fff !important;
+}
+
+dl, ol, ul{
+  margin-bottom: 0em !important;
+}
+.disabledField{
+  width:0% !important;
+  display: none;
+   
+  margin-right: 25px !important;
+}
+.enabledField{
+  display: inline-block;
+  width:90% !important;
+  opacity: 1 !important;
+  margin-right: 25px !important;
+}
+.closeIconClass{
+position: absolute;
+top: 5px;
+color: #333 !important;
+right: 25px;
+font-size: 25px;
+}
+.mat-drawer.mat-drawer-side{
+  visibility: visible !important;
+  z-index: 2;
+
+}
+
+i.met-search {
+  color: #5F5F67;
+}
+
+.mat-form-field-underline.ng-tns-c4-0.ng-star-inserted {
+  display: none;
+}
+
+
+div#cdk-overlay-0 {
+  top: 114px !important;
+}
+.mat-option:hover:not(.mat-option-disabled), .mat-option:focus:not(.mat-option-disabled) {
+  background: #0088D1;
+  color: #fff !important;
+}
+.mat-option a:hover{
+  color: #fff !important;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-wrapper {
+  padding-bottom: 0px;
+  background: none !important;
+}
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+  background-color: inherit !important;
+}
+
+.bread-bg-cl ol li .arrow-left {
+  background-image:url(../../../assets/img/ag-right.svg);
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 18px;
+  margin-top: 7.2px;
+  content: '';
+  float: right;
+  background-size: 16px;
+}
+
+.mat-form-field-underline.ng-tns-c4-0.ng-star-inserted {
+  display: none;
+}
+
+.mat-option.mat-selected:not(.mat-option-multiple):not(.mat-option-disabled) {
+  background: none !important;
+}
+
+.breadcrumb {
+  background-color: #F5F5F5;
+  position: relative;
+  border-bottom: 1px solid #EAEAEA;
+  height: 45px;
+  padding:9px 20px 12px 20px;
+  border-radius: 0px;
+ }
+ .breadcrumb li a {
+   font-size: 14px;
+
+ }
+
+ .breadcrumb-item+.breadcrumb-item::before {
+  content: none !important;
+ }
+
+
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+  background-color: inherit;
+}
+
+@media (max-width:875px) { 
+  .enabledField{
+
+    margin-right: 0px !important;
+  }
+
+  .enabledField {
+    width: 83% !important;
+     left: 40px;
+    }
+    .breadcrumb {
+      height: 48px;
+      padding:9px 8px 1px 8px;
+    }
+  
+    .breadcrumb li a {
+      font-size: 12px !important;
+    }   .bread-bg-cl .breadcrumb .breadcrumb-item.active {
+      font-size: 12px !important;
+    }
+    .codeDumpName_breadcrumb {
+      font-size: 12px;
+    }
+
+    .mat-drawer-container {
+      overflow: inherit;
+      height: 114%;
+    }
+}
+@media (max-width:768px) { 
+  .mat-drawer-container {
+    overflow: inherit;
+    height: 93%;
+  }
+
+}
+@media (max-width:475px) { 
+  .bread-bg-cl .breadcrumb .breadcrumb-item.active {
+    font-size: 11px !important;
+  }
+
+}
+
+.search-right-main::before{
+  content: '' !important;
+}
+:host ::ng-deep mat-icon.md-24.copy_code.mat-icon.notranslate.material-icons.mat-icon-no-color {
+  height: auto !important;
+}

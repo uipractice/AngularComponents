@@ -1,0 +1,72 @@
+
+
+<mat-card class="m-t-15" >
+
+  <section>
+    <ng-container *ngIf="cartState$ | async as state">
+      <app-cart [state]="state"></app-cart>
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Total: {{ state.tot.subTot | currency:'INR':'symbol':'1.2-2' }}</mat-card-title>
+
+          <mat-card-subtitle>
+            tax: {{ state.tot.tax | currency:'INR':'symbol':'1.2-2' }}
+            <br />
+              at checkout: {{ state.tot.grandTot | currency:'INR':'symbol':'1.2-2' }}
+            </mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-actions>
+            <mat-chip-list>
+              <mat-chip *ngFor="let item of state.cart" [removable]="true" (removed)="remove(item)">{{ item.name }}
+                <mat-icon matChipRemove>cancel</mat-icon>
+              </mat-chip>
+            </mat-chip-list>
+          </mat-card-actions>
+        </mat-card>
+      <hr />
+      <mat-grid-list cols="3" rowHeight="3:2" [gutterSize]="'15px'">
+        <mat-grid-tile *ngFor="let item of state.store">
+      <mat-card class="items" >
+        <mat-card-header>
+          {{ item.name }}
+        </mat-card-header>
+        <!-- <img mat-card-image [src]="item.image" [alt]="image"> -->
+        <mat-card-subtitle>
+
+          <ul>
+            <li>{{ item.details }}</li>
+            <li>{{ item.price | currency:'INR':'symbol':'1.2-2' }}</li>
+          </ul>
+        </mat-card-subtitle>
+        <mat-card-actions>
+
+        <button mat-flat-button  class="shop" role="button" (click)="addItemToCart(item)">
+          <mat-icon>add_shopping_cart</mat-icon>
+          Add to cart
+        </button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+    </mat-grid-list>
+    </ng-container>
+  </section>
+<br><br>
+  <!-- Description -->
+  <h4 class="m-t-15">Description</h4>
+  <mat-card class="m-t-15">
+    <p> A shopping cart is a component that keeps the record of the items a buyer has "picked up" from the online store</p>
+  </mat-card>
+  <!-- /Description -->
+</mat-card>
+
+<h4 class="m-t-15">Setup</h4>
+<mat-card class="m-t-15">
+<p>Step 1</p>
+<p >
+Create four different component like <code>cart.ts, checkout.ts, data.ts, shopping-cart.component.html and shopping-cart.component.ts</code> in one folder.
+</p>
+<p>Step 2</p>
+<p >
+Create a service like <code>shopping-cart.service.ts</code> for cart & checkout management service.
+</p>
+</mat-card>

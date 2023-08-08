@@ -1,0 +1,53 @@
+
+<mat-card class="m-t-15" >
+<section>
+<div class="example-container">
+<h2>List1</h2>
+<div
+cdkDropList
+#List1="cdkDropList"
+[cdkDropListData]="list1"
+[cdkDropListConnectedTo]="[List2]"
+class="example-list"
+(cdkDropListDropped)="drop($event)">
+<div class="example-box"  *ngFor="let item of list1" 
+(click)="addThisitemToArray(item)" [class.active]="isitemSelected(item)" 
+cdkDrag>{{item}}</div>
+</div>
+</div>
+
+<div class="example-container">
+<h2>List2</h2>
+<div
+cdkDropList
+#List2="cdkDropList"
+[cdkDropListData]="list2"
+[cdkDropListConnectedTo]="[List1]"
+class="example-list"
+(cdkDropListDropped)="drop($event)">
+<div class="example-box" *ngFor="let item of list2"
+(click)="addThisitemToArray(item)" [class.active]="isitemSelected(item)"
+cdkDrag>{{item}}</div>
+</div>
+</div>
+
+
+</section>
+</mat-card>
+<!-- Description -->
+<h4 class="m-t-15">Description</h4>
+<mat-card class="m-t-15">
+<p>Drag and drop is a pointing device gesture in which the user selects a virtual object by "grabbing" it and dragging it to a different location or onto another virtual object. In general, 
+it can be used to invoke many kinds of actions, or create various types of associations between two abstract objects.</p>
+</mat-card>
+<!-- code Walk Through -->
+
+<h4 class="m-t-15">Setup</h4>
+<mat-card class="m-t-15">
+<p>Step 1</p>
+<p class="docs-api-module-import">
+<code>
+import &#123; DragDropModule  &#125; from '@angular/cdk/drag-drop';
+</code>
+</p>
+</mat-card>

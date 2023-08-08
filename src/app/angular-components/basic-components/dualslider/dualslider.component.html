@@ -1,0 +1,53 @@
+
+<mat-card class="m-t-15" >  
+
+
+<!-- <range-slider [min]="min1" [max]="max1" [step]="step" (onRangeChange)="rangeChanged($event)" ngDefaultControl [(ngModel)]="stepRange"  
+[highlightClass]="'stephighlightClass'" [barClass]="'stepBarClass'" [sliderClass]="'stepSliderClass'"></range-slider> -->
+<!-- <ng5-slider [(value)]="value" [(highValue)]="highValue"></ng5-slider> -->
+<section>
+    <ngx-slider [(value)]="value" [(highValue)]="highValue" [options]="options"></ngx-slider>
+    <p> <b>Range:</b> {{value}}-{{highValue}} </p>
+</section>
+
+
+<!-- /Description -->
+<h4 class="m-t-15">Description</h4>
+<mat-card class="m-t-15">
+<p> The dual slider component can be useful for allowing users to select a specific price range when browsing products.</p>
+</mat-card>
+<!-- code Walk Through -->
+
+<h4 class="m-t-15">Setup</h4>
+<mat-card class="m-t-15">
+<p>Step 1</p>
+<p class="docs-api-module-import">
+<code>
+npm i @angular-slider/ngx-slider
+</code>
+</p>
+<p>Step 2</p>
+<p class="docs-api-module-import">
+<code>
+import &#123; NgxSliderModule    &#125; from '@angular-slider/ngx-slider';
+</code>
+
+</p>
+</mat-card>
+
+</mat-card>
+<!-- <mat-card class="m-t-15" >
+<section >
+
+</section>
+<h4 class="m-t-15">Description</h4>
+<mat-card class="m-t-15">The dual slider can be useful for allowing users to select a specific price range when browsing products.
+</mat-card>
+ <h4 class="m-t-15">Setup</h4>
+<mat-card>
+<div class="m-t-15">
+empty
+</div>
+</mat-card> 
+
+</mat-card>                    -->

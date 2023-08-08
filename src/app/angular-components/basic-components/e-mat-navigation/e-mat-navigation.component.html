@@ -1,0 +1,41 @@
+<!--Component-->
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <p>Auto-resizing sidenav</p>
+    <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+    <button (click)="showFiller = !showFiller" mat-raised-button>
+      Toggle extra text
+    </button>
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <button type="button" mat-raised-button (click)="drawer.toggle()" style="background: #f2f3f8">
+      Toggle sidenav
+    </button>
+  </div>
+
+</mat-drawer-container>
+<!--<COmponent>-->
+
+  <!-- Description -->
+<h4 class="m-t-15">Description</h4>
+<mat-card class="m-t-15">
+  <p>
+      A navigation bar is a user interface element within a webpage that contains links to other sections of the website.
+  </p>
+
+</mat-card>
+<!-- /Description -->
+
+<!-- code Walk Through -->
+
+<h4 class="m-t-15">Setup</h4>
+<mat-card class="m-t-15">
+  <p>Step 1</p>
+  <p class="docs-api-module-import">
+    <code>    
+          import &#123; MatMenuModule &#125; from '@angular/material/menu';
+    </code>
+  </p>
+</mat-card>
+<!-- / code Walk Through -->

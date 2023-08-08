@@ -1,0 +1,69 @@
+<!--Component-->
+<ol *ngIf="!eShareDataService.bootstrapCode">
+  <li>
+    <mat-form-field>
+      <input matInput [(ngModel)]="name" placeholder="What's your name?">
+    </mat-form-field>
+  </li>
+  <li>
+    <button mat-raised-button (click)="openDialog()">Pick one</button>
+  </li>
+  <li *ngIf="animal" style="margin-top:10px;">
+    You Choose:
+    <i>{{animal}}</i>
+  </li>
+</ol>
+<div class="container" *ngIf="eShareDataService.bootstrapCode">
+  <!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+<!--<Component>-->
+
+  <!-- Description -->
+<h4 class="m-t-15">Description</h4>
+<mat-card class="m-t-15">
+    <div class="m-t-15">
+        <p>
+            Dialog is a type of modal window that appears in front of app content to provide critical information or ask for a decision. Dialogs disable the app functionality when they appear, and remain on screen until confirmed, dismissed, or a required action is taken.
+        </p>
+      
+      </div>
+  </mat-card>
+
+<!-- /Description -->
+
+<!-- code Walk Through -->
+
+<h4 class="m-t-15" *ngIf="!eShareDataService.bootstrapCode">Setup</h4>
+<mat-card class="m-t-15" *ngIf="!eShareDataService.bootstrapCode">
+<div class="m-t-15">
+  <p>Step 1</p>
+  <p class="docs-api-module-import">
+    <code>    
+          import &#123; MatDialogModule &#125; from '@angular/material/dialog';
+    </code>
+  </p>
+</div>
+</mat-card>
+<!-- / code Walk Through -->

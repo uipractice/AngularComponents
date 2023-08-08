@@ -1,0 +1,36 @@
+<mat-card class="m-t-15"  *ngIf="!eShareDataService.bootstrapCode">
+  <span>
+    <h2>PDF File Viewer</h2>
+  
+  <button mat-raised-button style="background-color: #0088D1; color: white; margin-bottom: 20px;" (click)="downloadFile()">Download PDF</button>
+  
+  </span>
+  <pdf-viewer
+    [src]="pdfSrc"
+    [render-text]="true"
+    [original-size]="false"
+    style="width: 800px; height: 600px"
+  ></pdf-viewer>
+
+</mat-card>
+
+<!-- /Description -->
+<h4 class="m-t-15">Description</h4>
+<mat-card class="m-t-15">
+<p> ng2-pdf viewer is a component, in which you can view in your project.</p>
+</mat-card>
+<!-- code Walk Through -->
+
+<h4 class="m-t-15">Setup</h4>
+<mat-card class="m-t-15">
+<p>Step 1</p>
+<p class="docs-api-module-import">
+<code>
+  npm i ng2-pdf-viewer
+</code>
+
+<p>Step 2</p>
+<p class="docs-api-module-import">
+<code>
+import &#123; PdfViewerModule   &#125; from 'ng2-pdf-viewer';
+</code>

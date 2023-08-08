@@ -1,0 +1,32 @@
+  <!--Component-->
+  <mat-form-field>
+    <input matInput value="Disco party!" placeholder="Message" #message>
+  </mat-form-field> &nbsp;
+  
+  <mat-form-field>
+    <input matInput value="Dance" placeholder="Action" #action>
+  </mat-form-field> &nbsp;
+  
+  <button mat-raised-button (click)="openSnackBar(message.value, action.value)">Show snack-bar</button>
+  <!--<Component>-->
+
+<!-- Description -->
+<h4 class="m-t-15">Description</h4>
+<mat-card class="m-t-15">
+  <p>It is a small message that shows up in a box at the bottom of the screen and disappears on its own after few seconds. It is a simple feedback about an operation in which current activity remains visible and interactive.</p>
+
+</mat-card>
+<!-- /Description -->
+
+<!-- code Walk Through -->
+
+<h4 class="m-t-15">Setup</h4>
+<mat-card class="m-t-15">
+    <p>Step 1</p>
+    <p class="docs-api-module-import">
+      <code>  
+          import &#123; MatSnackBarModule &#125; from '@angular/material/snack-bar';
+      </code>
+    </p>
+</mat-card>
+  

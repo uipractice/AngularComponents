@@ -1,0 +1,52 @@
+
+<mat-card class="m-t-15" >  
+<section>
+<h2>Feedback Form!</h2>
+<div [formGroup]="formGroup">
+<div>
+<mat-form-field>
+<input matInput placeholder="Enter your email" [formControl]="emailField" required>
+<mat-icon matSuffix>email</mat-icon>
+<mat-error *ngIf="emailField.invalid">{{ getErrorMessage(emailField) }}</mat-error>
+</mat-form-field>
+</div>
+<div>
+<mat-form-field class="half-width">
+<textarea matInput placeholder="Enter your feedback" [formControl]="feedbackField" cdkTextareaAutosize required></textarea>
+<mat-icon matSuffix>feedback</mat-icon>
+<mat-error *ngIf="feedbackField.invalid">{{ getErrorMessage(feedbackField) }}</mat-error>
+</mat-form-field>
+</div>
+<div>
+<button mat-raised-button color="accent" id="feedbackbtn" (click)="onSubmit()" [disabled]="formGroup.invalid">Submit Feedback</button></div>
+</div>
+</section><br><br>
+
+<!-- /Description -->
+<h4 class="m-t-15">Description</h4>
+<mat-card class="m-t-15">
+    
+<p> The Feedback form component can be useful for collecting important information from user about products & services.</p>
+</mat-card>
+<!-- code Walk Through -->
+
+<h4 class="m-t-15">Setup</h4>
+<mat-card class="m-t-15">
+<p>Step 1</p>
+<p class="docs-api-module-import">
+  <code>
+    import &#123; FormsModule  &#125; from '@angular/forms';
+</code>
+
+<p>Step 2</p>
+<p class="docs-api-module-import">
+<code>
+import &#123; MatFormFieldModule,MatInputModule    &#125; from '@angular/material';
+<!-- import &#123; MatInputModule    &#125; from '@angular/material/input'; -->
+</code>
+
+</p>
+
+</mat-card>
+
+</mat-card>

@@ -1,0 +1,74 @@
+<!-- component  -->
+ 
+   
+<mat-accordion *ngIf="!eShareDataService.bootstrapCode">
+    <mat-expansion-panel [expanded]="false" (opened)="panelOpenState1 = true" (closed)="panelOpenState1 = false" style="margin-top: 10px;">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            
+          </mat-panel-title>
+          <mat-panel-description>
+            Currently I am {{panelOpenState1 ? 'open' : 'closed'}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>I'm visible because I am closed</p>
+      </mat-expansion-panel>
+  <mat-expansion-panel [expanded]="true" (opened)="panelOpenState = true" (closed)="panelOpenState = false" style="margin-top: 10px;">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        
+      </mat-panel-title>
+      <mat-panel-description>
+        Currently I am {{panelOpenState ? 'open' : 'closed'}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>I'm visible because I am open</p>
+  </mat-expansion-panel>
+</mat-accordion>
+
+ <mat-card  *ngIf="eShareDataService.bootstrapCode">
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+          <div class="panel-heading" (click)="arrowFunction()">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Bootstrap Accordion</a>
+              <span class="angle" *ngIf="angleDown">  <i class="fas fa-angle-down"></i></span>
+              <span class="angle" *ngIf="!angleDown">  <i class="fas fa-angle-up"></i></span>
+            </h4>
+          </div>
+          <div id="collapse1" class="panel-collapse collapse">
+            <div class="panel-body">Accordion is a component which organizes content within collapsable items.
+               Accordion allows showing only one collapsed item at a time. Accordions can toggle through a number of text blocks on a single click,
+                significantly improving the user experience of a project.
+              </div>
+          </div>
+        </div>
+      </div> 
+ </mat-card>
+
+<!-- /component -->
+
+<!-- Description -->
+<h4 class="m-t-15">Description</h4>
+<mat-card class="m-t-15" style="width:100%;">
+  <p>
+      Accordion is a component which organizes content within collapsable items. Accordion allows showing only one collapsed item at a time.
+
+      Accordions can toggle through a number of text blocks on a single click, significantly improving the user experience of a project.
+  </p>
+
+</mat-card>
+<!-- /Description -->
+
+<!-- code Walk Through -->
+
+<h4 class="m-t-15" *ngIf="!eShareDataService.bootstrapCode">Setup</h4>
+<mat-card class="m-t-15" *ngIf="!eShareDataService.bootstrapCode">
+  <p>Step 1</p>
+  <p class="docs-api-module-import">
+    <code>
+          import &#123; MatExpansionModule &#125; from '@angular/material/expansion';
+    </code>
+  </p>
+</mat-card>
+<!-- / code Walk Through -->

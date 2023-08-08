@@ -1,0 +1,15 @@
+
+ <input  *ngIf="!eShareDataService.bootstrapCode" type="file" id="photo" (change)="onFileUpload($event.target)"  accept="image/png, image/jpg, image/jpeg, application/pdf,multipart/form-data,.xlsx,.xls,.doc,.docx"/>
+
+ <label class="btn btn-info labelClass" *ngIf="eShareDataService.bootstrapCode">
+        Browse<input type="file" id="photo" (change)="onFileUpload($event.target)" class="uploadClass"  accept="image/png, image/jpg, image/jpeg, application/pdf,multipart/form-data,.xlsx,.xls,.doc,.docx"/>
+</label>
+<br/>
+    {{photoFormData}}
+ <!-- Description -->
+<h4 class="m-t-15">Description</h4>
+<mat-card class="m-t-15">
+    <p>File Input is a field which the user can use to upload one or more files (photos, documents or any other file type) from local storage.</p>
+
+</mat-card>
+<!-- /Description -->
